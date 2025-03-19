@@ -17,7 +17,7 @@ app.patch('/tasks/:index',(req,res)=>{
     const index=parseInt(req.params.index);
     if(isNaN(index) || index<0 || index>=tasks.length)return res.status(400).json({messgae:"Invalid task Index"});
     tasks.splice(index,1);
-    res.json({messgae:Task deleted Successfully});
+    res.json({messgae:"Task deleted Successfully"});
 })
 
 const PORT=3000;
